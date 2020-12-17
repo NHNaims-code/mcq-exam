@@ -1,0 +1,22 @@
+.id{
+    width: 100px;
+}
+
+input:hover{
+    cursor: pointer;
+}
+
+.custom-input{
+    display: inline-block;
+}
+
+.add-btn{
+    font-size:22px;
+    font-weight: 700;
+    background-color: #71AD3D;
+}
+.add-btn:hover{
+    font-size:22px;
+    font-weight: 700;
+    background-color: #4e792a;
+}

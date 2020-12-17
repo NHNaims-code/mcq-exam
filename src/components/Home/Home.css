@@ -1,0 +1,14 @@
+.home-root{
+    width: 40%;
+}
+.head-sec{
+    height: 300px;
+    width: 100%;
+}
+
+.model-test{
+    border: 1px solid lightgray;
+    padding: 24px;
+    margin: 24px;
+    font-size: 26px;
+}

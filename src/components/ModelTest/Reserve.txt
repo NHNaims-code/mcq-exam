@@ -1,0 +1,162 @@
+import React, { useState } from 'react';
+import './ModelTest.css';
+
+
+
+const ModelTest = () => {
+    const [examResult, setExamResult] = useState({correct: 2, wrong: 0})
+    const quitions = [
+        {
+            id: 1,
+            question: 'What is your name?',
+            optA: 'Jhon',
+            optB: 'Vhon',
+            optC: 'Ton',
+            optD: 'Ron',
+            CA: 'Ton'
+        },
+        {
+            id: 2,
+            question: 'What is your name?',
+            optA: 'Jhon',
+            optB: 'Vhon',
+            optC: 'Ton',
+            optD: 'Ron',
+            CA: 'Ton'
+        },
+        {
+            id: 3,
+            question: 'What is your name?',
+            optA: 'Jhon',
+            optB: 'Vhon',
+            optC: 'Ton',
+            optD: 'Ron',
+            CA: 'Ton'
+        },
+        {
+            id: 4,
+            question: 'What is your name?',
+            optA: 'Jhon',
+            optB: 'Vhon',
+            optC: 'Ton',
+            optD: 'Ron',
+            CA: 'Ton'
+        },
+        {
+            id: 5,
+            question: 'What is your name?',
+            optA: 'Jhon',
+            optB: 'Vhon',
+            optC: 'Ton',
+            optD: 'Ron',
+            CA: 'Ton'
+        },
+        {
+            id: 6,
+            question: 'What is your name?',
+            optA: 'Jhon',
+            optB: 'Vhon',
+            optC: 'Ton',
+            optD: 'Ron',
+            CA: 'Ton'
+        },
+        {
+            id: 7,
+            question: 'What is your name?',
+            optA: 'Jhon',
+            optB: 'Vhon',
+            optC: 'Ton',
+            optD: 'Ron',
+            CA: 'Ton'
+        },
+        {
+            id: 8,
+            question: 'What is your name?',
+            optA: 'Jhon',
+            optB: 'Vhon',
+            optC: 'Ton',
+            optD: 'Ron',
+            CA: 'Ton'
+        },
+    ]
+    let randomId = 1;
+    const makeId = () => {
+        const random =Math.floor(Math.random() * 1010000); 
+        randomId = random;
+    }
+
+    const answerList = [];
+    const correctAnsList = [];
+    const wrongAnsList = [];
+
+    const handleSelect = (e) => {
+        answerList['Q'+e.target.name] = e.target.value;
+        const optA = e.target.name+'OptA';
+        const optB = e.target.name+'OptB';
+        const optC = e.target.name+'OptC';
+        const optD = e.target.name+'OptD';
+
+        document.getElementById(optA).disabled = true;
+        document.getElementById(optB).disabled = true;
+        document.getElementById(optC).disabled = true;
+        document.getElementById(optD).disabled = true;
+       for (let q = 0; q < quitions.length; q++) {
+           const element = quitions[q];
+           if(element.id == e.target.name){
+               console.log('okey');
+               if(element.CA === e.target.value){
+                correctAnsList['Q'+e.target.name] = e.target.value;
+               }
+               else{
+                   wrongAnsList['Q'+e.target.name] = e.target.value;
+               }
+           }
+           
+       }
+    console.log('correctAnslist', correctAnsList);
+    console.log('wrongAnsList', wrongAnsList);
+    setExamResult({correct: 5, wrong: 8})
+    }
+    return (
+        <div className="container w-75 mx-auto">
+            {
+                
+                quitions.map(ques => 
+                <div>
+                    {
+                        makeId()
+                    }
+                    <div className="text-left question">MCQ {ques.id}: {ques.question}</div>
+                    <div className="row w-50">
+                        <div className="col-md-6 text-left">
+                        <input onChange={handleSelect} value={ques.optA} className="m-3" type="radio" name={`${ques.id}`} id={`${ques.id}OptA`}/>
+                        <label htmlFor={`${ques.id}OptA`}>{ques.optA}</label>
+                        </div>
+                        <div className="col-md-6 text-left">
+                        <input onChange={handleSelect} value={ques.optB} className="m-3" type="radio" name={`${ques.id}`} id={`${ques.id}OptB`}/>
+                        <label htmlFor={`${ques.id}OptB`}>{ques.optB}</label>
+                        </div>
+                        <div className="col-md-6 text-left">
+                        <input onChange={handleSelect} value={ques.optC} className="m-3" type="radio" name={`${ques.id}`} id={`${ques.id}OptC`}/>
+                        <label htmlFor={`${ques.id}OptC`}>{ques.optC}</label>
+                        </div>
+                        <div className="col-md-6 text-left">
+                        <input onChange={handleSelect} value={ques.optD} className="m-3" type="radio" name={`${ques.id}`} id={`${ques.id}OptD`}/>
+                        <label htmlFor={`${ques.id}OptD`}>{ques.optD}</label>
+                        </div>
+                    </div>
+                </div>
+                )
+            }
+            <div className="d-flex justify-content-center">
+                <button className="btn btn-warning px-5 my-5 ">Submit</button>
+            </div>
+            <div>
+            <button className="btn btn-success p-3 m-5">Right : {examResult.correct}</button>
+            <button className="btn btn-danger p-3 m-5">Wrong : {examResult.wrong}</button>
+            </div>
+        </div>
+    );
+};
+
+export default ModelTest;

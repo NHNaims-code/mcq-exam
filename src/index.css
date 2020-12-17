@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(https://elasticbeanstalk-ap-southeast-1-051040323559.s3-ap-southeast-1.amazonaws.com/livemcq-files/public/img/livemcq-homebg-seamless-paper.png);
+  repeat:repeat-x;
+  repeat:repeat-y;
+  padding-bottom:30px;
+  font-size:16px;
 }
 
 code {
