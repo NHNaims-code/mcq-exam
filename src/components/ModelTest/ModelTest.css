@@ -47,3 +47,11 @@ input[type='radio']:checked:after {
     visibility: visible;
     border: 3px solid #ffffff;
 }
+
+
+@media (max-width: 600px){
+    .model-root{
+        width: 100%;
+    }
+    
+}

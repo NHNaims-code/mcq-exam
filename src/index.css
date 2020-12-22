@@ -10,9 +10,15 @@ body {
   repeat:repeat-y;
   padding-bottom:30px;
   font-size:16px;
+  font-family: kohinur;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@font-face {
+  font-family: 'kohinur';
+  src: local('kohinur'), url(./fonts/kohinur.ttf) format('ttf');
 }

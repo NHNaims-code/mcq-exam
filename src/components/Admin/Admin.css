@@ -6,6 +6,29 @@ input:hover{
     cursor: pointer;
 }
 
+.MuiPaper-root{
+    background-color: #71AD3D;
+
+}
+
+.MuiTab-textColorPrimary.Mui-selected {
+    color: white !important;
+}
+
+.MuiTab-textColorPrimary {
+    color: white !important;
+}
+
+#app-bar-root{
+    background-color: #71AD3D;
+    color: #fff;
+}
+
+.MuiAppBar-colorDefault {
+    color: rgba(0, 0, 0, 0.87);
+    background-color: #71AD3D;
+}
+
 .custom-input{
     display: inline-block;
 }

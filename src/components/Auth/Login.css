@@ -1,0 +1,29 @@
+.login-form{
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+.login-root{
+    margin: 50px;
+
+}
+.registration-headline{
+    padding-top: 30px;
+}
+
+@media (max-width: 600px){
+    .login-form{
+        width: 100%;
+    }
+    .login-root{
+        margin: 0;
+        padding: 25px;
+    }
+    .login-root h1{
+        text-align:center;
+    }
+    .registration-headline{
+        margin-top: 0;
+        padding-top: 15px;
+    }
+}

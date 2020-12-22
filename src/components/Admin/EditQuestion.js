@@ -21,7 +21,7 @@ const EditQuestion = ({data, setOpen, allquestions}) => {
 
         console.log(updateQuestion);
 
-        fetch('http://localhost:4000/update/' + data._id, {
+        fetch('https://livemcq.herokuapp.com/update/' + data._id, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(updateQuestion)

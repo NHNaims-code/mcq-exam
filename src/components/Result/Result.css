@@ -6,3 +6,10 @@ h6{
     font-size: 18px;
     text-align: left;
 }
+
+@media (max-width: 600px){
+    .result-root{
+        width: 100%;
+    }
+    
+}
